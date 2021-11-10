@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import reactDOM from "react-dom";
+import CommentDetail from "./components/CommentDetail";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  return (
+    <div className="ui container comments">
+      <CommentDetail author="Daro" date="Today at 4:45PM" content="Hello, I am Daro"/>
+      <CommentDetail author="Vouchly" date="Today at 2:00AM" content="Hello, I am Vouchly" />
+      <CommentDetail author="Mey" date="Yesterday at 5:00PM" content="Hello Iam Mey" />
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reactDOM.render(<App />, document.querySelector("#root"));
